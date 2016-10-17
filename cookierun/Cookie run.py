@@ -4,6 +4,8 @@ from pico2d import *
 import Stage
 import character
 import Backstage
+import Hurdle
+
 
 running = None
 current_time = 0.0
@@ -29,6 +31,8 @@ def main():
     backstage = Backstage.BackStage()
     stage = Stage.Stage()
     Character = character.Character()
+
+    Hur = [Hurdle.Hurdle1() for i in range(20)]
 
     frame_time = get_frame_time()
 
@@ -57,11 +61,20 @@ def main():
 
         backstage.update(frame_time)
         Character.update()
+        stage.update(frame_time)
+
+        for Hurdle1 in Hur:
+            Hurdle1.update(frame_time)
+
 
         clear_canvas()
+
         backstage.draw()
         stage.draw()
         Character.draw()
+        for Hurdle1 in Hur:
+            Hurdle1.draw()
+
         update_canvas()
 
         delay(0.04)

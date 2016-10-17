@@ -26,7 +26,7 @@ class BackStage:
 
     def update(self, frame_time):
         if BackStage.RUN_SPEED_PPS * frame_time > 7:
-            self.distance = 6.5
+            self.distance = 10
         else:
             self.distance = BackStage.RUN_SPEED_PPS * frame_time
 
