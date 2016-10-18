@@ -32,7 +32,7 @@ def main():
     stage = Stage.Stage()
     Character = character.Character()
 
-    Hur = [Hurdle.Hurdle1() for i in range(20)]
+    Hur = [Hurdle.Hurdle1() for i in range(10)]
 
     frame_time = get_frame_time()
 
