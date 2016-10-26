@@ -14,12 +14,7 @@ class Hurdle1:
     posx = 600
     def __init__(self):
 
-        self.x = random.randint(600, 5600)
-        self.y = 225
-        self.distance = 0
-        self.count = 0
-        if self.image_init == None:
-            self.hurdle1 = load_image('image\\hurdle1-1.png')
+    pass
 
 
     def update(self, frame_time):
