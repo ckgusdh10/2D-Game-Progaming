@@ -13,9 +13,7 @@ class Hurdle1:
     count = 0
     posx = 600
     def __init__(self):
-
-    pass
-
+         pass
 
     def update(self, frame_time):
         if Hurdle1.RUN_SPEED_PPS * frame_time > 7:
