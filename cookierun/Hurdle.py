@@ -1,5 +1,6 @@
 from pico2d import *
 import random
+import json
 
 class Hurdle1:
     image_init = None

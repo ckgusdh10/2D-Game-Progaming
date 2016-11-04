@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e945148-fc18-4cf1-a3b5-eb100ba79710" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/Hurdle.py" afterPath="$PROJECT_DIR$/cookierun/Hurdle.py" />
     </list>
     <ignored path="2D-Game-Progaming.iws" />
@@ -25,7 +26,7 @@
       <file leaf-file-name="Cookie run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/Cookie run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="1178">
               <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
               <folding>
                 <element signature="e#1#14#0" expanded="true" />
@@ -67,8 +68,8 @@
       <file leaf-file-name="Hurdle.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cookierun/Hurdle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="133">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -190,7 +191,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/2DPythonProgramming-master" />
   </component>
   <component name="RunManager" selected="Python.Cookie run">
     <configuration default="false" name="Cookie run" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -820,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/Cookie run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="1178">
           <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding>
             <element signature="e#1#14#0" expanded="true" />
@@ -830,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/Hurdle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="133">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
