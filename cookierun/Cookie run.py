@@ -4,7 +4,7 @@ from pico2d import *
 import Stage
 import character
 import Backstage
-#import Hurdle
+import Hurdle
 
 
 running = None
@@ -31,6 +31,7 @@ def main():
     backstage = Backstage.BackStage()
     stage = Stage.Stage()
     Character = character.Character()
+    hurdle = Hurdle.Hurdle1()
 
   #  Hur = [Hurdle.Hurdle1() for i in range(10)]
 
@@ -65,7 +66,7 @@ def main():
 
        # for Hurdle1 in Hur:
         #    Hurdle1.update(frame_time)
-
+        Hurdle1.draw()
 
         clear_canvas()
 
