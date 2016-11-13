@@ -2,11 +2,11 @@ from pico2d import *
 import random
 import json
 
-hurdle_data_file = open('MapData\\stage1-1.txt', 'r')
+hurdle_data_file = open('MapData\\stage1-1', 'r')
 hurdle_data = json.load(hurdle_data_file)
 hurdle_data_file.close()
 
-hurdle_len_file = open('MapData\\stage1.txt', 'r')
+hurdle_len_file = open('MapData\\stage1', 'r')
 len_data = json.load(hurdle_len_file)
 hurdle_len_file.close()
 
@@ -74,15 +74,37 @@ class Hurdle1:
         self.width = self.arr['width']
         self.height = self.arr['height']
 
-    def update(self, frame_time):
-        if Hurdle1.RUN_SPEED_PPS * frame_time > 7:
-            self.distance = 10
-        else:
-            self.distance = Hurdle1.RUN_SPEED_PPS * frame_time
+    def update(self, frame_time, Count_copy):
+        global Hurdle_Start1, random_draw1
+
+        if Count_copy >= 1:
+            self.Hurdle_Start1 = True
+
+        if self.Hurdle_Start1 == True and self.state != "Collid":
+            self.hurdle_move(frame_time)
+            self.sum = 0
+
+        elif self.Hurdle_Start1 == True and self.state == "Collid":
+            if self.sum < 30:
+
+                self.sum += 10
+                for i in range(2):
+                    if self.x > 150:
+                        self.x += 20
+                    else:
+                        self.x -= 20
 
         self.x -= self.distance
 
+        def create(self, num):
+            hurdle = []
+            for i in range(2):
+                self.name = "현오"
+                self.x = hurdle_data[i]['x']
+                self.y = hurdle_data[i]['y']
+                hurdle.append(self)
 
+            return hurdle
 
     #def draw(self):
    #     self.hurdle1.draw(self.x, self.y)

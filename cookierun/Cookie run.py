@@ -11,7 +11,7 @@ running = None
 current_time = 0.0
 
 
-
+hurdle = None
 
 
 
@@ -31,8 +31,25 @@ def main():
     backstage = Backstage.BackStage()
     stage = Stage.Stage()
     Character = character.Character()
-    hurdle = Hurdle.Hurdle1()
-
+    hurdle = list()
+    hurdle_start = None
+    len_data = None
+    Hurdle.Hurdle_Start1 = False
+    Hurdle.Hurdle_Start2 = False
+    Hurdle.Hurdle_Start3 = False
+    Hurdle.Hurdle_Start4 = False
+    Hurdle.Hurdle_Start5 = False
+    if hurdle_start == None:
+        for i in range(len_data['Stage1_Fork']['Len']):
+            hurdle.append(Hurdle(len_data['Stage1_Fork']['num'], i))
+        for i in range(len_data['Stage1_Fork2']['Len']):
+            hurdle.append(Hurdle(len_data['Stage1_Fork2']['num'], i))
+        for i in range(len_data['Stage1_thorn']['Len']):
+            hurdle.append(Hurdle(len_data['Stage1_thorn']['num'], i))
+        for i in range(len_data['big_jelly']['Len']):
+            hurdle.append(Hurdle(len_data['big_jelly']['num'], i))
+        for i in range(len_data['item_jelly']['Len']):
+            hurdle.append(Hurdle(len_data['item_jelly']['num'], i))
   #  Hur = [Hurdle.Hurdle1() for i in range(10)]
 
     frame_time = get_frame_time()
@@ -57,7 +74,10 @@ def main():
                 Character.state = "run"
                 Character.y = 240
 
+
+
     while running:
+        global hurdle
         handle_events()
 
         backstage.update(frame_time)
@@ -66,7 +86,8 @@ def main():
 
        # for Hurdle1 in Hur:
         #    Hurdle1.update(frame_time)
-        Hurdle1.draw()
+        for i in hurdle:
+            i.draw()
 
         clear_canvas()
 
