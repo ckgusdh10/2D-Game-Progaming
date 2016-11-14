@@ -40,16 +40,7 @@ def main():
     Hurdle.Hurdle_Start4 = False
     Hurdle.Hurdle_Start5 = False
     if hurdle_start == None:
-        for i in range(len_data['Stage1_Fork']['Len']):
-            hurdle.append(Hurdle(len_data['Stage1_Fork']['num'], i))
-        for i in range(len_data['Stage1_Fork2']['Len']):
-            hurdle.append(Hurdle(len_data['Stage1_Fork2']['num'], i))
-        for i in range(len_data['Stage1_thorn']['Len']):
-            hurdle.append(Hurdle(len_data['Stage1_thorn']['num'], i))
-        for i in range(len_data['big_jelly']['Len']):
-            hurdle.append(Hurdle(len_data['big_jelly']['num'], i))
-        for i in range(len_data['item_jelly']['Len']):
-            hurdle.append(Hurdle(len_data['item_jelly']['num'], i))
+
   #  Hur = [Hurdle.Hurdle1() for i in range(10)]
 
     frame_time = get_frame_time()
