@@ -39,7 +39,7 @@ def main():
     Hurdle.Hurdle_Start3 = False
     Hurdle.Hurdle_Start4 = False
     Hurdle.Hurdle_Start5 = False
-    if hurdle_start == None:
+   
 
   #  Hur = [Hurdle.Hurdle1() for i in range(10)]
 
