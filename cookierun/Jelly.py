@@ -29,17 +29,16 @@ class Jelly:
         hurdle_state = {
             "jelly": self.image
         }
-
-        hurdle = []
+        jelly = []
         for name in jelly_data:
-            hur = Jelly()
-            hur.name = name
-            hur.x = jelly_data[name]['x']
-            hur.y = jelly_data[name]['y']
-            hur.state = hurdle_state[jelly_data[name]['state']]
-            hurdle.append(hur)
+            jel = Jelly()
+            jel.name = name
+            jel.x = jelly_data[name]['x']
+            jel.y = jelly_data[name]['y']
+            jel.state = hurdle_state[jelly_data[name]['state']]
+            jelly.append(jel)
 
-        return hurdle
+        return jelly
 
     def update(self, frame_time):
         if Jelly.RUN_SPEED_PPS * frame_time > 7:
