@@ -4,6 +4,8 @@ from Stage import *
 from character import *
 from Backstage import *
 from Hurdle import *
+from Jelly import *
+
 import game_framework
 import title_state
 
@@ -14,6 +16,7 @@ character = None
 backstage = None
 hurdle = None
 hurdle2 = None
+jelly = None
 
 name = "MainState"
 
@@ -29,12 +32,13 @@ def collid(a, b):
     return True
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2
+    global stage, character, backstage, running, hurdle, hurdle2, jelly
     backstage = BackStage()
     stage = Stage()
     character = Character()
     hurdle = Hurdle1().create()
     hurdle2 = Hurdle12().create()
+    jelly = Jelly().create()
     running = True
 
 def get_frame_time():
@@ -45,7 +49,25 @@ def get_frame_time():
     return frame_time
 
 def exit():
-    pass
+    global stage, character, backstage, running, hurdle, hurdle2, jelly
+    del(stage)
+    del(character)
+    del(backstage)
+    for hur in hurdle:
+        hurdle.remove(hur)
+        del(hur)
+    del(hurdle)
+
+    for hur in hurdle2:
+        hurdle2.remove(hur)
+        del(hur)
+    del(hurdle2)
+
+    for jel in jelly:
+        jelly.remove(jel)
+        del(jel)
+    del(jelly)
+
 def pause():
     pass
 
@@ -61,17 +83,21 @@ def update():
     character.update()
     stage.update(frame_time)
 
+
     for hur in hurdle:
         hur.update(frame_time)
         if collid(character, hur):
             character.state = "collid"
 
-
-
     for hur in hurdle2:
         hur.update(frame_time)
         if collid(character, hur):
             character.state = "collid"
+
+    for jel in jelly:
+        jel.update(frame_time)
+        if collid(character, jel):
+            jelly.remove(jel)
 
 def handle_events():
     global running
@@ -111,6 +137,10 @@ def draw():
     for hur in hurdle2:
         hur.draw()
         hur.draw_bb()
+
+    for jel in jelly:
+        jel.draw()
+        jel.draw_bb()
 
     # for Hurdle1 in Hur:
     #   Hurdle1.draw()

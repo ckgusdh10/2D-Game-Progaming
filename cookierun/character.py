@@ -26,11 +26,13 @@ class Character:
 
         if self.state == "collid":
             self.collidtime += 1
-            if(self.collidtime >= 5):
+            if(self.collidtime >= 10):
                 self.state = "run"
+                self.y = 240
+                self.collidtime = 0
 
         if self.state == "jump" and self.jump_state == "up":
-            if self.y >= 400:
+            if self.y >= 350:
                 self.jump_state = "down"
             self.y += 15
 
