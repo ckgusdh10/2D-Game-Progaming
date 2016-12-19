@@ -8,6 +8,7 @@ from Jelly import *
 
 import game_framework
 import title_state
+import main_state2
 
 running = None
 current_time = 0.0
@@ -17,6 +18,7 @@ backstage = None
 hurdle = None
 hurdle2 = None
 jelly = None
+hp = None
 
 name = "MainState"
 
@@ -32,13 +34,15 @@ def collid(a, b):
     return True
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp
     backstage = BackStage()
     stage = Stage()
     character = Character()
     hurdle = Hurdle1().create()
     hurdle2 = Hurdle12().create()
     jelly = Jelly().create()
+    hp = Hp().create()
+
     running = True
 
 def get_frame_time():
@@ -49,7 +53,7 @@ def get_frame_time():
     return frame_time
 
 def exit():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp
     del(stage)
     del(character)
     del(backstage)
@@ -67,6 +71,11 @@ def exit():
         jelly.remove(jel)
         del(jel)
     del(jelly)
+
+    for hpj in hp:
+        hp.remove(hpj)
+        del(hpj)
+    del(hp)
 
 def pause():
     pass
@@ -89,6 +98,7 @@ def update():
         if collid(character, hur):
             character.state = "collid"
 
+
     for hur in hurdle2:
         hur.update(frame_time)
         if collid(character, hur):
@@ -99,8 +109,18 @@ def update():
         if collid(character, jel):
             jelly.remove(jel)
 
+    for hpj in hp:
+        hpj.update(frame_time)
+        if collid(character, hpj):
+            hp.remove(hpj)
+            character.heal()
+
 def handle_events():
-    global running
+    global running, backstage
+
+    if backstage.frame >= 8:
+        game_framework.change_state(main_state2)
+
 
     events = get_events()
     for event in events:
@@ -111,10 +131,10 @@ def handle_events():
         else:
 
             if event.type == SDL_KEYDOWN and event.key == SDLK_z:
-                if character.state != "collid":
+                #if character.state != "collid":
                     character.state = "jump"
             elif event.type == SDL_KEYDOWN and event.key == SDLK_x:
-                if character.state != "collid":
+                #if character.state != "collid":
                     character.state = "slide"
             elif event.type == SDL_KEYUP and event.key == SDLK_x:
                 character.state = "run"
@@ -127,7 +147,7 @@ def draw():
     clear_canvas()
     backstage.draw()
     stage.draw()
-    character.draw()
+
     character.draw_bb()
 
     for hur in hurdle:
@@ -142,6 +162,11 @@ def draw():
         jel.draw()
         jel.draw_bb()
 
+    for hpj in hp:
+        hpj.draw()
+        hpj.draw_bb()
+
+    character.draw()
     # for Hurdle1 in Hur:
     #   Hurdle1.draw()
     delay(0.04)

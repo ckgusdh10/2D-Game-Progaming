@@ -4,7 +4,7 @@ class BackStage:
     image_init = None
 
     PIXEL_PER_METER = (10.0 / 0.3)
-    RUN_SPEED_KMPH = 20.0
+    RUN_SPEED_KMPH = 30.0
     RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
     RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
     RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -23,6 +23,7 @@ class BackStage:
         if BackStage.image_init == None:
             self.stage1 = load_image('image\\stage1-1.png')
             self.stage2 = load_image('image\\stage1-1.png')
+            self.stage3 = load_image('image\\stage1-rot.png')
 
     def update(self, frame_time):
         if BackStage.RUN_SPEED_PPS * frame_time > 7:
@@ -45,10 +46,18 @@ class BackStage:
             self.stage1_x = 400
             self.stage1_y = 400
 
+            if self.frame == 8:
+                self.frame = 8
+
+            else:
+                self.frame = (self.frame + 1) % 9
+
+
 
     def draw(self):
         if self.count >= 7:
-            self.stage1.draw(self.stage1_x, self.stage1_y)
+            self.stage3.clip_draw(self.frame * 800, 0, 800, 800, self.stage1_x, self.stage1_y)
+            delay(0.05)
         else:
             self.stage1.draw(self.stage1_x, self.stage1_y)
             self.stage2.draw(self.stage2_x, self.stage2_y)

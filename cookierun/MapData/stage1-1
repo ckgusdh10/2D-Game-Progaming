@@ -11,6 +11,6 @@
     "hurdle10" : {"state" : "hurdle1", "x" : 3600, "y" : 220},
     "hurdle11" : {"state" : "hurdle1", "x" : 3900, "y" : 220},
     "hurdle12" : {"state" : "hurdle1", "x" : 4900, "y" : 220},
-    "hurdle13" : {"state" : "hurdle1", "x" : 5200, "y" : 220},
-    "hurdle14" : {"state" : "hurdle1", "x" : 5500, "y" : 220}
+    "hurdle13" : {"state" : "hurdle1", "x" : 5100, "y" : 220},
+    "hurdle14" : {"state" : "hurdle1", "x" : 5700, "y" : 220}
 }

@@ -11,22 +11,33 @@ class Character:
         self.state = "run"
         self.jump_state = "up"
         self.slide_count = 0
+        self.hp = 500
+
+
 
         if self.image_init == None:
             self.run = load_image('image\\cookie_run.png')
             self.jump = load_image('image\\cookie_run_jump.png')
             self.slide = load_image('image\\cookie_run_slide.png')
             self.collid = load_image('image\\cookie_run_collid.png')
+            self.hpbar = load_image('image\\hp.png')
+
+    def heal(self):
+        self.hp += 100
+
 
     def update(self):
+        self.hp -= 1
 
         self.frame += 1
         if self.frame == 6:
             self.frame = 1
 
         if self.state == "collid":
+
             self.collidtime += 1
             if(self.collidtime >= 10):
+                self.hp -= 50
                 self.state = "run"
                 self.y = 240
                 self.collidtime = 0
@@ -63,7 +74,7 @@ class Character:
             self.slide.draw(self.x, self.y)
         elif self.state == "collid":
             self.collid.draw(self.x, self.y)
-
+        self.hpbar.draw_to_origin(0, 500, self.hp, 50)
 
 
 
