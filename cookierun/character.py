@@ -3,6 +3,7 @@ from pico2d import *
 
 class Character:
     image_init = None
+    state_init = None
     collidtime = 0
     def __init__(self):
         self.x = 100
@@ -22,6 +23,14 @@ class Character:
             self.collid = load_image('image\\cookie_run_collid.png')
             self.hpbar = load_image('image\\hp.png')
 
+        if self.state_init == None:
+            self.jump_sound = load_wav('Sound\jump.wav')
+            self.jump_sound.set_volume(64)
+            self.slide_sound = load_wav('Sound\slide.wav')
+            self.slide_sound.set_volume(64)
+            self.collid_sound = load_wav('Sound\collid.wav')
+            self.collid_sound.set_volume(64)
+
     def heal(self):
         self.hp += 100
 
@@ -36,8 +45,12 @@ class Character:
         if self.state == "collid":
 
             self.collidtime += 1
-            if(self.collidtime >= 10):
+            if self.collidtime == 1:
+                self.collid_sound.play()
                 self.hp -= 50
+            if(self.collidtime >= 10):
+
+
                 self.state = "run"
                 self.y = 240
                 self.collidtime = 0

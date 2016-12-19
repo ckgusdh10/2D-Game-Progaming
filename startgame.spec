@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['startgame.py'],
+a = Analysis(['\\cookierun\\startgame.py'],
              pathex=['C:\\Users\\Administrator\\Desktop\\2D-Game-Progaming\\2D-Game-Progaming'],
              binaries=None,
              datas=None,

@@ -20,6 +20,7 @@ hurdle2 = None
 jelly = None
 hp = None
 
+
 name = "MainState"
 
 def collid(a, b):
@@ -42,6 +43,7 @@ def enter():
     hurdle2 = Hurdle12().create()
     jelly = Jelly().create()
     hp = Hp().create()
+
 
     running = True
 
@@ -96,12 +98,15 @@ def update():
     for hur in hurdle:
         hur.update(frame_time)
         if collid(character, hur):
+            #character.collid_sound.play()
             character.state = "collid"
+
 
 
     for hur in hurdle2:
         hur.update(frame_time)
         if collid(character, hur):
+            #character.collid_sound.play()
             character.state = "collid"
 
     for jel in jelly:
@@ -119,6 +124,7 @@ def handle_events():
     global running, backstage
 
     if backstage.frame >= 8:
+        #backstage.ChangeState_sound.play()
         game_framework.change_state(main_state2)
 
 
@@ -131,11 +137,11 @@ def handle_events():
         else:
 
             if event.type == SDL_KEYDOWN and event.key == SDLK_z:
-                #if character.state != "collid":
-                    character.state = "jump"
+                character.jump_sound.play()
+                character.state = "jump"
             elif event.type == SDL_KEYDOWN and event.key == SDLK_x:
-                #if character.state != "collid":
-                    character.state = "slide"
+                character.slide_sound.play()
+                character.state = "slide"
             elif event.type == SDL_KEYUP and event.key == SDLK_x:
                 character.state = "run"
                 character.y = 240

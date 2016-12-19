@@ -2,6 +2,7 @@ from pico2d import *
 
 class BackStage:
     image_init = None
+    ChangeState = None
 
     PIXEL_PER_METER = (10.0 / 0.3)
     RUN_SPEED_KMPH = 30.0
@@ -24,6 +25,13 @@ class BackStage:
             self.stage1 = load_image('image\\stage1-1.png')
             self.stage2 = load_image('image\\stage1-1.png')
             self.stage3 = load_image('image\\stage1-rot.png')
+            self.bgm = load_music('Sound\\stage1.mp3')
+            self.bgm.set_volume(64)
+            self.bgm.repeat_play()
+
+        if BackStage.ChangeState == None:
+            self.ChangeState_sound = load_wav('Sound\ChangeState.wav')
+            self.ChangeState_sound.set_volume(64)
 
     def update(self, frame_time):
         if BackStage.RUN_SPEED_PPS * frame_time > 7:
@@ -56,6 +64,7 @@ class BackStage:
 
     def draw(self):
         if self.count >= 7:
+            self.ChangeState_sound.play()
             self.stage3.clip_draw(self.frame * 800, 0, 800, 800, self.stage1_x, self.stage1_y)
             delay(0.05)
         else:
@@ -86,6 +95,9 @@ class BackStage2:
         if BackStage.image_init == None:
             self.stage1 = load_image('image\\stage2-1.png')
             self.stage2 = load_image('image\\stage2-1.png')
+            self.bgm = load_music('Sound\\stage2.mp3')
+            self.bgm.set_volume(64)
+            self.bgm.repeat_play()
 
     def update(self, frame_time):
         if BackStage.RUN_SPEED_PPS * frame_time > 7:
