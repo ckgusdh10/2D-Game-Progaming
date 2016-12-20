@@ -19,7 +19,8 @@ hurdle = None
 hurdle2 = None
 jelly = None
 hp = None
-
+jellysound = None
+hpjellysound = None
 
 name = "MainState"
 
@@ -35,7 +36,7 @@ def collid(a, b):
     return True
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound
     backstage = BackStage()
     stage = Stage()
     character = Character()
@@ -43,7 +44,8 @@ def enter():
     hurdle2 = Hurdle12().create()
     jelly = Jelly().create()
     hp = Hp().create()
-
+    jellysound = Jelly()
+    hpjellysound = Hp()
 
     running = True
 
@@ -87,7 +89,6 @@ def resume():
     pass
 def update():
     global running, backstage, character, stage, hurdle
-
     handle_events()
     frame_time = get_frame_time()
     backstage.update(frame_time)
@@ -112,11 +113,13 @@ def update():
     for jel in jelly:
         jel.update(frame_time)
         if collid(character, jel):
+            jellysound.jellyitem_sound.play()
             jelly.remove(jel)
 
     for hpj in hp:
         hpj.update(frame_time)
         if collid(character, hpj):
+            hpjellysound.hpitem_sound.play()
             hp.remove(hpj)
             character.heal()
 

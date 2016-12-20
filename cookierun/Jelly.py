@@ -15,6 +15,7 @@ hp_data_file.close()
 class Jelly:
     global jelly_data
     image = None
+    jellyitem = None
     state = "None"
     PIXEL_PER_METER = (10.0 / 0.3)
     RUN_SPEED_KMPH = 20.0
@@ -28,6 +29,12 @@ class Jelly:
 
         if Jelly.image == None:
             self.jelly = load_image('image\\jelly.png')
+        if self.jellyitem == None:
+            self.jellyitem_sound = load_wav('Sound\\jelly.wav')
+            self.jellyitem_sound.set_volume(64)
+
+    def jellysound(self):
+        self.jellyitem_sound.play()
 
     def create(self):
         hurdle_state = {
@@ -64,6 +71,7 @@ class Jelly:
 class Hp:
     global hp_data
     image = None
+    hpitem = None
     state = "None"
     PIXEL_PER_METER = (10.0 / 0.3)
     RUN_SPEED_KMPH = 20.0
@@ -77,6 +85,10 @@ class Hp:
 
         if Hp.image == None:
             self.hp = load_image('image\\hp_jelly.png')
+
+        if self.hpitem == None:
+            self.hpitem_sound = load_wav('Sound\\hp_jelly.wav')
+            self.hpitem_sound.set_volume(64)
 
     def create(self):
         hurdle_state = {
