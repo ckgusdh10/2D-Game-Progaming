@@ -169,23 +169,23 @@ def draw():
     backstage.draw()
 
 
-    character.draw_bb()
+    #character.draw_bb()
 
     for hur in hurdle:
         hur.draw()
-        hur.draw_bb()
+#        hur.draw_bb()
 
     for hur in hurdle2:
         hur.draw()
-        hur.draw_bb()
+ #       hur.draw_bb()
 
     for jel in jelly:
         jel.draw()
-        jel.draw_bb()
+  #      jel.draw_bb()
 
     for hpj in hp:
         hpj.draw()
-        hpj.draw_bb()
+   #     hpj.draw_bb()
 
     character.draw()
     font.draw(100, 550, 'Score : %3.2d' % score.score, (255, 255, 255))
