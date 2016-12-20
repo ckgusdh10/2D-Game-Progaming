@@ -44,11 +44,12 @@ def draw():
     global font, score, ascore
     clear_canvas()
     result.draw(400, 300)
-    font.draw(290, 380, '%3.2d' % main_state.ascore)
+    font.draw(290, 380, '%3.2d' % main_state2.ascore)
     update_canvas()
 
 def update():
-    print("Stage1 Clear Time : ", main_state.ascore)
+    pass
+    #print("Stage1 Clear Time : ", main_state.ascore + main_state2.ascore)
 
 
 def pause():
