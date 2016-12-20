@@ -9,6 +9,7 @@ from Jelly import *
 import game_framework
 import title_state
 import main_state2
+import result
 
 running = None
 current_time = 0.0
@@ -36,7 +37,7 @@ def collid(a, b):
     return True
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound, font
     backstage = BackStage()
     stage = Stage()
     character = Character()
@@ -46,6 +47,7 @@ def enter():
     hp = Hp().create()
     jellysound = Jelly()
     hpjellysound = Hp()
+    font = load_font('image\\ENCR10B.TTF')
 
     running = True
 
@@ -94,7 +96,7 @@ def update():
     backstage.update(frame_time)
     character.update()
     stage.update(frame_time)
-
+    character.score += 5
 
     for hur in hurdle:
         hur.update(frame_time)
@@ -115,6 +117,7 @@ def update():
         if collid(character, jel):
             jellysound.jellyitem_sound.play()
             jelly.remove(jel)
+            character.score += 100
 
     for hpj in hp:
         hpj.update(frame_time)
@@ -152,6 +155,8 @@ def handle_events():
                 game_framework.change_state(title_state)
             elif event.type == SDL_KEYDOWN and event.key == SDLK_2:
                 game_framework.change_state(main_state2)
+            elif event.type == SDL_KEYDOWN and event.key == SDLK_3:
+                game_framework.change_state(result)
 
 def draw():
     global backstage, stage, character, running
@@ -177,6 +182,7 @@ def draw():
         hpj.draw()
         hpj.draw_bb()
 
+    font.draw(100, 550, 'Score : %3.2d' % character.score, (255, 255, 255))
     character.draw()
     # for Hurdle1 in Hur:
     #   Hurdle1.draw()

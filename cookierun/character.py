@@ -13,7 +13,7 @@ class Character:
         self.jump_state = "up"
         self.slide_count = 0
         self.hp = 500
-
+        self.score = 0
 
 
         if self.image_init == None:
