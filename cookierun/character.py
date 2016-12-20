@@ -5,6 +5,7 @@ class Character:
     image_init = None
     state_init = None
     collidtime = 0
+    score = 0
     def __init__(self):
         self.x = 100
         self.y = 240
@@ -34,6 +35,10 @@ class Character:
     def heal(self):
         self.hp += 100
 
+
+
+    def get_score(self):
+        return self.score
 
     def update(self):
         self.hp -= 1

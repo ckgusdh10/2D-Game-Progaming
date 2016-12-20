@@ -1,22 +1,21 @@
 from pico2d import *
-from character import *
+from score import *
+
 import game_framework
-import title_state
 import main_state
 import main_state2
 
-score = None
-title = None
-result = None
-font = None
+
+name = "ResultState"
+
 image = None
 
 def enter():
-    global title, result, font, score
+    global title, result, font, character, score
     title = load_image('image\\title.png')
     result = load_image('image\\result.png')
     font = load_font('image\\ENCR10B.TTF', 100)
-    score = Character()
+    score = Score()
 
 
 
@@ -42,14 +41,14 @@ def handle_events():
 
 
 def draw():
-    global font, score
+    global font, score, ascore
     clear_canvas()
     result.draw(400, 300)
-    font.draw(290, 380, '%3.2d' % score.score)
+    font.draw(290, 380, '%3.2d' % main_state.ascore)
     update_canvas()
 
 def update():
-    pass
+    print("Stage1 Clear Time : ", main_state.ascore)
 
 
 def pause():

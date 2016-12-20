@@ -5,6 +5,7 @@ from character import *
 from Backstage import *
 from Hurdle import *
 from Jelly import *
+from score import *
 
 import game_framework
 import title_state
@@ -22,7 +23,8 @@ jelly = None
 hp = None
 jellysound = None
 hpjellysound = None
-
+score = None
+ascore = 0
 name = "MainState"
 
 def collid(a, b):
@@ -37,7 +39,7 @@ def collid(a, b):
     return True
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound, font
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound, font, score
     backstage = BackStage()
     stage = Stage()
     character = Character()
@@ -47,6 +49,7 @@ def enter():
     hp = Hp().create()
     jellysound = Jelly()
     hpjellysound = Hp()
+    score = Score()
     font = load_font('image\\ENCR10B.TTF')
 
     running = True
@@ -90,14 +93,15 @@ def pause():
 def resume():
     pass
 def update():
-    global running, backstage, character, stage, hurdle
+    global running, backstage, character, stage, hurdle, ascore
     handle_events()
     frame_time = get_frame_time()
     backstage.update(frame_time)
     character.update()
     stage.update(frame_time)
-    character.score += 5
-
+    score.stage1_socre()
+    ascore = score.score
+    print("Stage1 Clear Time : ", score.score)
     for hur in hurdle:
         hur.update(frame_time)
         if collid(character, hur):
@@ -117,7 +121,7 @@ def update():
         if collid(character, jel):
             jellysound.jellyitem_sound.play()
             jelly.remove(jel)
-            character.score += 100
+            score.score += 100
 
     for hpj in hp:
         hpj.update(frame_time)
@@ -125,6 +129,9 @@ def update():
             hpjellysound.hpitem_sound.play()
             hp.remove(hpj)
             character.heal()
+
+    if character.hp <= 0:
+        game_framework.change_state(result)
 
 def handle_events():
     global running, backstage
@@ -182,7 +189,7 @@ def draw():
         hpj.draw()
         hpj.draw_bb()
 
-    font.draw(100, 550, 'Score : %3.2d' % character.score, (255, 255, 255))
+    font.draw(100, 550, 'Score : %3.2d' % score.score, (255, 255, 255))
     character.draw()
     # for Hurdle1 in Hur:
     #   Hurdle1.draw()
