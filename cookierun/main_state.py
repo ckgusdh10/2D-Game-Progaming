@@ -150,6 +150,8 @@ def handle_events():
                 character.y = 240
             elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
                 game_framework.change_state(title_state)
+            elif event.type == SDL_KEYDOWN and event.key == SDLK_2:
+                game_framework.change_state(main_state2)
 
 def draw():
     global backstage, stage, character, running

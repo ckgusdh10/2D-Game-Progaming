@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e945148-fc18-4cf1-a3b5-eb100ba79710" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookierun/MapData/stage2-1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_Spear.png" afterPath="$PROJECT_DIR$/cookierun/image/Stage2_Spear.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_thorn.png" afterPath="$PROJECT_DIR$/cookierun/image/Stage2_thorn.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_thorn3.png" afterPath="$PROJECT_DIR$/cookierun/image/Stage2_thorn3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_thorn4.png" afterPath="$PROJECT_DIR$/cookierun/image/Stage2_thorn4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookierun/MapData/hp2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookierun/MapData/jelly2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cookierun/MapData/stage2-2" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_Spear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_thorn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cookierun/image/Stage2_thorn4.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/Hurdle.py" afterPath="$PROJECT_DIR$/cookierun/Hurdle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/Jelly.py" afterPath="$PROJECT_DIR$/cookierun/Jelly.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/character.py" afterPath="$PROJECT_DIR$/cookierun/character.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/MapData/stage2-1" afterPath="$PROJECT_DIR$/cookierun/MapData/stage2-1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/main_state.py" afterPath="$PROJECT_DIR$/cookierun/main_state.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cookierun/main_state2.py" afterPath="$PROJECT_DIR$/cookierun/main_state2.py" />
     </list>
     <ignored path="2D-Game-Progaming.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="main_state.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/main_state.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+            <state relative-caret-position="190">
+              <caret line="115" column="12" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="45" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -46,18 +48,8 @@
       <file leaf-file-name="jelly" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/MapData/jelly">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="startgame.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cookierun/startgame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="319">
+              <caret line="47" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -66,38 +58,48 @@
       <file leaf-file-name="Jelly.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/Jelly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="1516">
+              <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hurdle.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hurdle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/Hurdle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+            <state relative-caret-position="1305">
+              <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="131" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_state2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jelly2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cookierun/MapData/jelly2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hp2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cookierun/MapData/hp2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_state2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cookierun/main_state2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Backstage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cookierun/Backstage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1691">
-              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+            <state relative-caret-position="494">
+              <caret line="143" column="45" selection-start-line="143" selection-start-column="45" selection-end-line="143" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -106,18 +108,18 @@
       <file leaf-file-name="stage2-1" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage2-1">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="character.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cookierun/character.py">
+      <file leaf-file-name="stage2-2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage2-2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -126,8 +128,8 @@
       <file leaf-file-name="hp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cookierun/MapData/hp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -152,18 +154,22 @@
         <option value="$PROJECT_DIR$/cookierun/MapData/state1" />
         <option value="$PROJECT_DIR$/cookierun/Cookie run.py" />
         <option value="$PROJECT_DIR$/cookierun/2013180041.txt" />
-        <option value="$PROJECT_DIR$/cookierun/MapData/jelly" />
         <option value="$PROJECT_DIR$/cookierun/startgame.py" />
         <option value="$PROJECT_DIR$/cookierun/Stage.py" />
-        <option value="$PROJECT_DIR$/cookierun/main_state2.py" />
         <option value="$PROJECT_DIR$/cookierun/MapData/stage1-1" />
-        <option value="$PROJECT_DIR$/cookierun/MapData/stage1-2" />
         <option value="$PROJECT_DIR$/cookierun/MapData/hp" />
         <option value="$PROJECT_DIR$/cookierun/Backstage.py" />
         <option value="$PROJECT_DIR$/cookierun/character.py" />
-        <option value="$PROJECT_DIR$/cookierun/Jelly.py" />
-        <option value="$PROJECT_DIR$/cookierun/main_state.py" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/stage1-2" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/stage2-1" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/stage2-2" />
         <option value="$PROJECT_DIR$/cookierun/Hurdle.py" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/jelly" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/jelly2" />
+        <option value="$PROJECT_DIR$/cookierun/MapData/hp2" />
+        <option value="$PROJECT_DIR$/cookierun/main_state.py" />
+        <option value="$PROJECT_DIR$/cookierun/Jelly.py" />
+        <option value="$PROJECT_DIR$/cookierun/main_state2.py" />
       </list>
     </option>
   </component>
@@ -198,6 +204,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,14 +258,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cookierun" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/Desktop/2D-Game-Progaming/2D-Game-Progaming/cookierun/main_state.py" />
   </component>
   <component name="RunManager" selected="Python.startgame">
     <configuration default="false" name="Cookie run" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -529,35 +536,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cookierun/Backstage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/pico2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4807">
-          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/Hurdle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/Stage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="31" selection-start-line="27" selection-start-column="8" selection-end-line="47" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/character.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -742,21 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage1-1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage1-2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/start_state.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -789,40 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/main_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/MapData/hp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/MapData/jelly">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/main_state2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/Backstage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1691">
@@ -831,26 +760,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage2-1">
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage1-2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cookierun/Jelly.py">
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage1-1">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/jelly">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="47" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/hp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage2-2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/stage2-1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/jelly2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/MapData/hp2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cookierun/Hurdle.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
+        <state relative-caret-position="1305">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="131" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/Jelly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1516">
+          <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/main_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="115" column="12" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cookierun/main_state2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="143" column="45" selection-start-line="143" selection-start-column="45" selection-end-line="143" selection-end-column="45" />
           <folding />
         </state>
       </provider>

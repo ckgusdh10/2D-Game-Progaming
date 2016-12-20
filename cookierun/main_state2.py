@@ -17,6 +17,9 @@ backstage = None
 hurdle = None
 hurdle2 = None
 jelly = None
+hp = None
+jellysound = None
+hpjellysound = None
 
 name = "MainState"
 
@@ -34,13 +37,16 @@ def collid(a, b):
 
 
 def enter():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp, jellysound, hpjellysound
     backstage = BackStage2()
     stage = Stage2()
     character = Character()
-    hurdle = Hurdle1().create()
-    hurdle2 = Hurdle12().create()
-    jelly = Jelly().create()
+    hurdle = Hurdle2().create()
+    hurdle2 = Hurdle22().create()
+    jelly = Jelly2().create()
+    hp = Hp2().create()
+    jellysound = Jelly()
+    hpjellysound = Hp()
     running = True
 
 
@@ -53,7 +59,7 @@ def get_frame_time():
 
 
 def exit():
-    global stage, character, backstage, running, hurdle, hurdle2, jelly
+    global stage, character, backstage, running, hurdle, hurdle2, jelly, hp
     del (stage)
     del (character)
     del (backstage)
@@ -71,6 +77,11 @@ def exit():
         jelly.remove(jel)
         del (jel)
     del (jelly)
+
+    for hpj in hp:
+        hp.remove(hpj)
+        del(hpj)
+    del(hp)
 
 
 def pause():
@@ -103,7 +114,15 @@ def update():
     for jel in jelly:
         jel.update(frame_time)
         if collid(character, jel):
+            jellysound.jellyitem_sound.play()
             jelly.remove(jel)
+
+    for hpj in hp:
+        hpj.update(frame_time)
+        if collid(character, hpj):
+            hpjellysound.hpitem_sound.play()
+            hp.remove(hpj)
+            character.heal()
 
 
 def handle_events():
@@ -134,7 +153,7 @@ def draw():
     global backstage, stage, character, running
     clear_canvas()
     backstage.draw()
-    stage.draw()
+
     character.draw()
     character.draw_bb()
 
@@ -150,6 +169,11 @@ def draw():
         jel.draw()
         jel.draw_bb()
 
+    for hpj in hp:
+        hpj.draw()
+        hpj.draw_bb()
+
+    stage.draw()
     # for Hurdle1 in Hur:
     #   Hurdle1.draw()
     delay(0.04)
